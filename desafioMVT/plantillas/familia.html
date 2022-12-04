@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio MVT</title>
+</head>
+<ul>
+    <h1>FAMILIA</h1>
+    <h2>Padre</h2>
+    <ul>
+        {{ mypadre= myDic.get('padre') }}
+        <li>Nommbre: {{ mypadre.nommbre }}</li>
+        <li>Apellido: {{ mypadre.apellido }}</li>
+        <li>Edad: {{ mypadre.edad }}</li>
+    </ul>
+    <h2>Madre</h2>
+    <ul>
+        {{ mymadre= myDic.get('madre') }}
+        <li>Nommbre: {{ mymadre.nommbre }}</li>
+        <li>Apellido: {{ mymadre.apellido }}</li>
+        <li>Edad: {{ mymadre.edad }}</li>
+    </ul>
+    <h2>Hija</h2>
+    <ul>
+        {{ myhija= myDic.get('hija') }}
+        <li>Nommbre: {{ myhija.nommbre }}</li>
+        <li>Apellido: {{ myhija.apellido }}</li>
+        <li>Edad: {{ myhija.edad }}</li>
+    </ul>
+</body>
+</html>
