@@ -9,26 +9,23 @@ def familia(request):
     padre.nombre="Ale"
     padre.apellido="Fruchdman"
     padre.rolFamiliar="Padre"
+    padre.edad = 51
     padre.save()
 
     madre = Persona()
     madre.nombre="Jesica"
     madre.apellido="Todisco"
+    madre.edad = 39
     madre.rolFamiliar="Madre"
     madre.save()
 
     hija = Persona()
-    hija.nombre="Rebeca"
+    hija.nombre="Beky"
     hija.apellido="Fruchdman"
+    hija.edad = 6
     hija.rolFamiliar="Hija"
     hija.save()
 
-    myDic = {
-        'padre':padre,
-        'madre':madre,
-        'hija':hija
-        }
         
-    mytemplate=loader.get_template("familia.html")
-    miPagina= mytemplate.render(myDic)
-    return HttpResponse(miPagina)
+    return render(request, 'familia.html', {"myDic":(padre,madre,hija)})
+
