@@ -9,3 +9,5 @@ class Persona(models.Model):
     dni=models.IntegerField
     email=models.EmailField()
     rolFamiliar=models.CharField(max_length=255, default="")
+    def __str__(self):
+        return f"{self.nombre} - {self.apellido} - {self.rolFamiliar}".format()

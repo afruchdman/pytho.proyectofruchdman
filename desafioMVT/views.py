@@ -4,6 +4,9 @@ from .models import *
 from django.http import HttpResponse
 
 # Create your views here.
+def inicio(request):
+      return render(request, "index.html")
+      
 def familia(request):
     padre = Persona()
     padre.nombre="Ale"
